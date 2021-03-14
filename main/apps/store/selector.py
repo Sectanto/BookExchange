@@ -294,12 +294,17 @@ class CreateProduct(object):
 
 	def create_product(self, req, parent_model_data):
 		product = req.POST
-		
+
 		if product['category'] == 'Transport':
 			if product['subcategory'] == 'Yengil mashinalar':
 				required_fields = ['payment_method', 'valute', 'price', 'model', 'production_year', 'transmission', 'fuel_type', 'engine_size', 'way_length', 'condition', 'other_options', 'seller']
 				return self.create_product_model(req, parent_model_data, ProductCARForm, required_fields)
 
+		if product['category'] == 'Fantasy':
+			if product['subcategory'] == 'bababababa':
+				required_fields = ['payment_method', 'valute', 'price', 'model', 'production_year', 'transmission', 'fuel_type', 'engine_size', 'way_length', 'condition', 'other_options', 'seller']
+				return self.create_product_model(req, parent_model_data, ProductCARForm, required_fields)
+		
 		if product['category'] == 'Elektr jihozlari':
 			if product['subcategory'] == 'Mobil telefon':
 				required_fields = ['payment_method', 'valute', 'price', 'model', 'condition', 'seller']

@@ -295,6 +295,12 @@ const createSubProduct = (prod) => {
 	let mainCategory = prod.category
 	let subCategory = prod.subcategory
 
+	if (mainCategory == 'Fantasy') {
+		if (subCategory == 'bababababa') {
+			prod = createProductCAR(prod)
+		}
+	}
+
 	if (mainCategory == 'Transport') {
 		if (subCategory == 'Yengil mashinalar') {
 			prod = createProductCAR(prod)
@@ -328,6 +334,7 @@ const createSubProduct = (prod) => {
 const createOtherOptions = () => {
 	let val = $('#subcategory').val().trim()
 	if (val == 'Yengil mashinalar') $('.transport-car-model').removeClass('d-none')
+	if (val == 'bababababa') $('.transport-car-model').removeClass('d-none')
 	if (val == 'Mobil telefon') $('.electrical-phone-model').removeClass('d-none')
 	if (val == 'Xususiy uylar') $('.realty-house-model').removeClass('d-none')
 	if (val == 'Mebel') $('.houseandgarden-furniture-model').removeClass('d-none')

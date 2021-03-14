@@ -66,6 +66,7 @@ class ProductCar(models.Model):
         return self.parent_product.title
 
 
+
 class ProductHouse(models.Model):
     parent_product = models.OneToOneField(ProductParent, on_delete=models.CASCADE, null=True)
     payment_method = models.CharField(max_length=100, null=True)

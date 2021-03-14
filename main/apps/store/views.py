@@ -98,6 +98,11 @@ def filter_products(req):
 		number_params = ['price', 'engine_size', 'way_length', 'production_year']
 		products = filter_product.filter_products(filter_params, ProductCar, 'productcar', type_params, number_params)
 
+	elif category == 'bababababa':
+		type_params = ['model', 'fuel_type', 'transmission', 'condition', 'seller', 'payment_method']
+		number_params = ['price', 'engine_size', 'way_length', 'production_year']
+		products = filter_product.filter_products(filter_params, ProductCar, 'productcar', type_params, number_params)
+
 	elif category == 'Mobil telefon':
 		type_params = ['model', 'condition', 'seller', 'payment_method']
 		number_params = ['price']

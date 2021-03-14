@@ -10,7 +10,9 @@ $('.products-data').remove()
 $('.category-name').remove()
 $('title').text(pageCategory)
 
+
 if (pageCategory == 'Yengil mashinalar') $('.car-filter-form').removeClass('d-none')
+if (pageCategory == 'bababababa') $('.car-filter-form').removeClass('d-none')
 if (pageCategory == 'Mobil telefon') $('.phone-filter-form').removeClass('d-none')
 if (pageCategory == 'Xususiy uylar') $('.house-filter-form').removeClass('d-none')
 if (pageCategory == 'Mebel') $('.furniture-filter-form').removeClass('d-none')
@@ -52,6 +54,7 @@ $('.filter-form').on('submit', evt => {
 
 const createFilterParams = params => {
 	if (params.category == 'Yengil mashinalar') return createCarFilterParams(params)
+	else if (params.category == 'bababababa') return createCarFilterParams(params)
 	else if (params.category == 'Mobil telefon') return createPhoneFilterParams(params)
 	else if (params.category == 'Xususiy uylar') return createHouseFilterParams(params)
 	else if (params.category == 'Mebel') return createFurnitureFilterParams(params)
